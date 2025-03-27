@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Akinator - ゲーム</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Original Akinator</h1>
+        </header>
+        
+        <main id="game-container">
+            <div id="question-container">
+                <div class="question-box">
+                    <p id="question-text">{{ question }}</p>
+                </div>
+                
+                <div class="buttons" id="answer-buttons">
+                    <button id="yes-button" class="btn btn-primary">はい</button>
+                    <button id="no-button" class="btn btn-secondary">いいえ</button>
+                </div>
+            </div>
+            
+            <div id="guess-container" style="display: none;">
+                <div class="question-box">
+                    <p>あなたが考えているのは <span id="guess-text"></span> ですか？</p>
+                </div>
+                
+                <div class="buttons">
+                    <button id="correct-button" class="btn btn-primary">はい、正解です</button>
+                    <button id="wrong-button" class="btn btn-secondary">いいえ、違います</button>
+                </div>
+            </div>
+            
+            <div id="learn-container" style="display: none;">
+                <div class="learn-box">
+                    <h2>教えてください</h2>
+                    <p>あなたが考えていたのは何ですか？</p>
+                    <input type="text" id="correct-answer" class="form-input" placeholder="例：犬、スマートフォン">
+                    
+                    <p>次の質問で <span id="wrong-guess"></span> と区別できますか？</p>
+                    <input type="text" id="distinguishing-question" class="form-input" placeholder="例：四本足がありますか？">
+                    
+                    <p>あなたが考えていたものに対するこの質問の答えは？</p>
+                    <div class="buttons">
+                        <button id="learn-yes-button" class="btn btn-primary">はい</button>
+                        <button id="learn-no-button" class="btn btn-secondary">いいえ</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="result-container" style="display: none;">
+                <div class="result-box">
+                    <h2 id="result-title">結果</h2>
+                    <p id="result-text"></p>
+                    
+                    <div class="buttons">
+                        <button id="play-again-button" class="btn btn-primary">もう一度遊ぶ</button>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">トップに戻る</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Original Akinator</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

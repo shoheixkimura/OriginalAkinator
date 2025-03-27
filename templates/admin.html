@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Akinator - 管理画面</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Original Akinator - キャラクター登録</h1>
+            <p>新しいキャラクターを登録して、Akinatorの知識を増やしましょう</p>
+        </header>
+        
+        <main>
+            <div class="admin-container">
+                <form action="{{ url_for('add_character') }}" method="post" class="character-form">
+                    <div class="form-group">
+                        <label for="character_name">キャラクター名:</label>
+                        <input type="text" id="character_name" name="character_name" class="form-input" required>
+                    </div>
+                    
+                    <h3>既存の質問に対する回答</h3>
+                    <div class="existing-questions">
+                        {% for question in questions %}
+                        <div class="form-group">
+                            <label>{{ question }}</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="attr_{{ question }}" value="yes"> はい
+                                </label>
+                                <label>
+                                    <input type="radio" name="attr_{{ question }}" value="no" checked> いいえ
+                                </label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <h3>新しい質問を追加</h3>
+                    <div class="form-group">
+                        <label for="new_question">新しい質問:</label>
+                        <input type="text" id="new_question" name="new_question" class="form-input" placeholder="例：四本足がありますか？">
+                        
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="new_answer" value="yes"> はい
+                            </label>
+                            <label>
+                                <input type="radio" name="new_answer" value="no" checked> いいえ
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">キャラクターを登録</button>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">戻る</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Original Akinator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "content": "生物ですか？",
+  "is_question": true,
+  "yes_node": {
+    "content": "動物ですか？",
+    "is_question": true,
+    "yes_node": {
+      "content": "四本足がありますか？",
+      "is_question": true,
+      "yes_node": {
+        "content": "ペットとして飼われますか？",
+        "is_question": true,
+        "yes_node": {
+          "content": "犬",
+          "is_question": false
+        },
+        "no_node": {
+          "content": "猫",
+          "is_question": false
+        }
+      },
+      "no_node": {
+        "content": "空を飛びますか？",
+        "is_question": true,
+        "yes_node": {
+          "content": "鷲",
+          "is_question": false
+        },
+        "no_node": {
+          "content": "魚",
+          "is_question": false
+        }
+      }
+    },
+    "no_node": {
+      "content": "花を咲かせますか？",
+      "is_question": true,
+      "yes_node": {
+        "content": "バラ",
+        "is_question": false
+      },
+      "no_node": {
+        "content": "木",
+        "is_question": false
+      }
+    }
+  },
+  "no_node": {
+    "content": "電子機器ですか？",
+    "is_question": true,
+    "yes_node": {
+      "content": "コミュニケーションに使いますか？",
+      "is_question": true,
+      "yes_node": {
+        "content": "スマートフォン",
+        "is_question": false
+      },
+      "no_node": {
+        "content": "コンピュータ",
+        "is_question": false
+      }
+    },
+    "no_node": {
+      "content": "座ることができますか？",
+      "is_question": true,
+      "yes_node": {
+        "content": "椅子",
+        "is_question": false
+      },
+      "no_node": {
+        "content": "テーブル",
+        "is_question": false
+      }
+    }
+  }
+}
