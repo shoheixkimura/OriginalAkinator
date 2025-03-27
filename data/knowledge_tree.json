@@ -1,74 +1,90 @@
 {
-  "content": "生物ですか？",
+  "content": "木村家ですか？",
   "is_question": true,
   "yes_node": {
-    "content": "動物ですか？",
+    "content": "朝すぐ起きられますか？",
     "is_question": true,
     "yes_node": {
-      "content": "四本足がありますか？",
+      "content": "一人で寝れますか？",
       "is_question": true,
       "yes_node": {
-        "content": "ペットとして飼われますか？",
+        "content": "怒り機ですか？",
         "is_question": true,
         "yes_node": {
-          "content": "犬",
+          "content": "木村 貴子",
           "is_question": false
         },
         "no_node": {
-          "content": "猫",
+          "content": "そんなやついねぇよ！",
           "is_question": false
         }
       },
       "no_node": {
-        "content": "空を飛びますか？",
+        "content": "寝ているときに鼻をものすごい勢いでｸﾆｸﾆｸﾆｸﾆってやって、鼻が取れそうになりますか？",
         "is_question": true,
         "yes_node": {
-          "content": "鷲",
+          "content": "ひろと",
           "is_question": false
         },
         "no_node": {
-          "content": "魚",
+          "content": "そんなやついねぇよ！",
           "is_question": false
         }
       }
     },
     "no_node": {
-      "content": "花を咲かせますか？",
+      "content": "デブですか？",
       "is_question": true,
       "yes_node": {
-        "content": "バラ",
-        "is_question": false
+        "content": "馬鹿なことばかり言いますか？",
+        "is_question": true,
+        "yes_node": {
+          "content": "木村 翔平",
+          "is_question": false
+        },
+        "no_node": {
+          "content": "そんなやついねぇよ！",
+          "is_question": false
+        }
       },
       "no_node": {
-        "content": "木",
-        "is_question": false
+        "content": "バスルームをカラオケルームと勘違いしていますか？",
+        "is_question": true,
+        "yes_node": {
+          "content": "さこ",
+          "is_question": false
+        },
+        "no_node": {
+          "content": "そんなやついねぇよ！",
+          "is_question": false
+        }
       }
     }
   },
   "no_node": {
-    "content": "電子機器ですか？",
+    "content": "Forge Homestead Apartmentsの住人ですか？",
     "is_question": true,
     "yes_node": {
-      "content": "コミュニケーションに使いますか？",
+      "content": "CMSの5th Gradeですか？",
       "is_question": true,
       "yes_node": {
-        "content": "スマートフォン",
+        "content": "ももか",
         "is_question": false
       },
       "no_node": {
-        "content": "コンピュータ",
+        "content": "クッキーちゃん（ねこ）",
         "is_question": false
       }
     },
     "no_node": {
-      "content": "座ることができますか？",
+      "content": "美味しい調味料ですか？",
       "is_question": true,
       "yes_node": {
-        "content": "椅子",
+        "content": "味噌",
         "is_question": false
       },
       "no_node": {
-        "content": "テーブル",
+        "content": "パクチーパウダー",
         "is_question": false
       }
     }
