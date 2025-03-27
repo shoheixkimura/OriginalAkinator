@@ -18,8 +18,11 @@ if src_dir not in sys.path:
 
 from src.akinator import Akinator, AkinatorNode
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.secret_key = "akinator_secret_key"  # 本番環境では安全な秘密鍵を使用してください
+
+# 静的ファイルの設定
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # 開発中はキャッシュを無効化
 
 # AkinatorインスタンスをFlaskアプリのグローバル変数として保持する
 akinator = Akinator()

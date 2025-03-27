@@ -37,6 +37,23 @@ header p {
     color: #666;
 }
 
+/* Akinatorキャラクター */
+.akinator-character {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.akinator-character img {
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.akinator-character img:hover {
+    transform: scale(1.05);
+}
+
 /* メインコンテンツ */
 main {
     background-color: white;

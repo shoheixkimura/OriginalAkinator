@@ -10,6 +10,9 @@
     <div class="container">
         <header>
             <h1>Original Akinator</h1>
+            <div class="akinator-character">
+                <img id="akinator-image" src="{{ url_for('static', filename='images/akinator_normal.png') }}" alt="Akinator Character">
+            </div>
         </header>
         
         <main id="game-container">
@@ -70,6 +73,15 @@
         </footer>
     </div>
     
+    <script>
+        // 画像パスの設定
+        const AKINATOR_IMAGES = {
+            normal: "{{ url_for('static', filename='images/akinator_normal.png') }}",
+            happy: "{{ url_for('static', filename='images/akinator_happy.png') }}",
+            surprised: "{{ url_for('static', filename='images/akinator_surprised.png') }}",
+            thinking: "{{ url_for('static', filename='images/akinator_thinking.png') }}"
+        };
+    </script>
     <script src="{{ url_for('static', filename='js/game.js') }}"></script>
 </body>
 </html>

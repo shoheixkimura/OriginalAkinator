@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Original Akinator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Original Akinator</h1>
-            <p>何かを思い浮かべてください。質問に答えることであなたの考えを当ててみます。</p>
-        </header>
-        
-        <main>
-            <div class="menu">
-                <a href="{{ url_for('game') }}" class="btn btn-primary">ゲームを始める</a>
-                <a href="{{ url_for('admin') }}" class="btn btn-secondary">キャラクター登録</a>
-            </div>
-            
-            <div class="info">
-                <h2>遊び方</h2>
-                <ol>
-                    <li>何か（物、動物、人物など）を思い浮かべてください</li>
-                    <li>Akinatorが質問をしますので、「はい」または「いいえ」で答えてください</li>
-                    <li>最終的にAkinatorがあなたの考えていることを推測します</li>
-                    <li>当たっていれば「はい」を、間違っていれば「いいえ」を選んでください</li>
-                    <li>間違った場合は、Akinatorが学習するための情報を教えてあげましょう</li>
-                </ol>
-            </div>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 Original Akinator</p>
-        </footer>
+      <header>
+        <h1>Hironator</h1>
+        <div class="akinator-character">
+          <img
+            src="{{ url_for('static', filename='images/akinator_normal.png') }}"
+            alt="Akinator Character"
+          />
+        </div>
+        <p>
+          何かを思い浮かべてください。質問に答えることであなたの考えを当ててみます。
+        </p>
+      </header>
+
+      <main>
+        <div class="menu">
+          <a href="{{ url_for('game') }}" class="btn btn-primary"
+            >ゲームを始める</a
+          >
+          <a href="{{ url_for('admin') }}" class="btn btn-secondary"
+            >キャラクター登録</a
+          >
+        </div>
+
+        <div class="info">
+          <h2>遊び方</h2>
+          <ol>
+            <li>何か（物、動物、人物など）を思い浮かべてください</li>
+            <li>
+              Hioronatorが質問をしますので、「はい」または「いいえ」で答えてください
+            </li>
+            <li>最終的にHironatorがあなたの考えていることを推測します</li>
+            <li>
+              当たっていれば「はい」を、間違っていれば「いいえ」を選んでください
+            </li>
+            <li>
+              間違った場合は、Hironatorが学習するための情報を教えてあげましょう
+            </li>
+          </ol>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Hironator</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
