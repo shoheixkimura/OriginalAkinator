@@ -65,7 +65,7 @@
     "content": "Forge Homestead Apartmentsの住人ですか？",
     "is_question": true,
     "yes_node": {
-      "content": "CMSの5th Gradeですか？",
+      "content": "CMSの6th Gradeですか？",
       "is_question": true,
       "yes_node": {
         "content": "ももか",
